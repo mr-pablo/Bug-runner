@@ -1,0 +1,93 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    /* scroll-behavior: smooth; */
+}
+
+#ground{
+    background-color: green;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+
+}
+
+#bug{
+    font-size: 50px;
+    position: absolute;
+    /* right: 1; */
+    left: 0px;
+    top:  0px ;
+    /* bottom: 10px; */
+    rotate: 10;
+    /* transition: 0.5s ease; */
+    transition: left 0.5s ease, top 0.5s ease, transform 0.5s ease;
+
+}
+.bttn-top{
+    width: 218px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3px;
+}
+.bttn-down{
+    margin-bottom: 10px;
+}
+button{
+ font-size: 40px
+}
+#bttn-div{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#bug-container {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: relative;
+} */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="ground">
+        <div id="bug">🪰</div>
+        <div id="bttn-div">
+            <div class="bttn-top">
+                <button onclick="up()">⬆️</button>
+            </div>
+            <div class="bttn-down">
+                <button onclick="left()">⬅️</button>
+                <button onclick="bottom()">⬇️</button>
+                <button onclick="right()">➡️</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    
+        let Left = 0
+        let Top = 0
+        
+        function left() {
+            Left = Left - 100
+            document.getElementById("bug").style.transform = `rotate(270deg)`
+            BugMove();
+        }
+
+        function right() {
+            Left = Left + 100
+            document.getElementById("bug").style.transform = `rotate(90deg)`
+            BugMove();
+        }
+
+        function up() {
+            Top = Top - 100
+            document.getElementById("bug").style.transform = `rotate(360deg)`
+            BugMove2();
+        }
+        function bottom() {
+            Top = Top + 100
+            document.getElementById("bug").style.transform = `rotate(180deg)`
+            BugMove2();
+        }
+
+        function BugMove() {
+            document.getElementById('bug').style.left = `${Left}px`
+        }
+        function BugMove2() {
+            document.getElementById('bug').style.top = `${Top}px`
+        }
+    </script>
+</body>
+
+</html>
