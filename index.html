@@ -26,40 +26,89 @@
 
 
     <script>
-
-    
         let Left = 0
         let Top = 0
-        
+
+        var ground11 = document.getElementById("ground")
+        let bugs11 = document.getElementById("bug");
+
+
+        let bugWidth = bugs11.offsetWidth
+        let windowWidth = ground11.offsetWidth
+
+        let windowHeight = ground11.offsetHeight
+
+        console.log("Window width: " + windowWidth1);
+        console.log("Window height: " + windowHeight);
+
         function left() {
+           
             Left = Left - 100
             document.getElementById("bug").style.transform = `rotate(270deg)`
-            BugMove();
+            if (Left < 0) {
+                Left = windowWidth - bugWidth
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+                console.log("hiiiiiiiiiiii")
+
+            } else {
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+                BugMove();
+            }
         }
 
         function right() {
             Left = Left + 100
             document.getElementById("bug").style.transform = `rotate(90deg)`
+            if (Left >= windowWidth) {
+                Left = windowWidth - bugWidth
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+                console.log("hiiiiiiiiiiii")
+            } else {
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+
+            }
             BugMove();
+
+
         }
 
         function up() {
             Top = Top - 100
             document.getElementById("bug").style.transform = `rotate(360deg)`
-            BugMove2();
+            if (Top < 0) {
+                Top = windowHeight - bugWidth
+                console.log("hiiiii");
+            } else {
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+                BugMove2();
+            }
+
         }
         function bottom() {
             Top = Top + 100
             document.getElementById("bug").style.transform = `rotate(180deg)`
+            if (Top >= windowHeight) {
+                Top = windowHeight - bugWidth
+                console.log("hiiiiiiiii");
+            } else {
+                console.log(`left = ${Left}`);
+                console.log(`top = ${Top}`);
+
+            }
             BugMove2();
         }
-
         function BugMove() {
             document.getElementById('bug').style.left = `${Left}px`
         }
         function BugMove2() {
             document.getElementById('bug').style.top = `${Top}px`
         }
+
     </script>
 </body>
 
